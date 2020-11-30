@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../img/pattern-bg.svg"),url("../img/pattern-curve.svg"),url("../img/pattern-quotes.svg");
+    background-size: contain 50px 50px;
+    background-position: top 50% right 12%,0 100%,top 30% left 30.5%;
+    background-repeat: no-repeat, no-repeat;
+}
+.container{
+    width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.container__drawer{
+  display: none;
+}
+.testimonial{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    z-index: 1
+}
+.testimonial #testimonialId{
+  width: 35rem;
+  font-weight: 300;
+  font-size: 25px;
+}
+.data-user{
+  display: flex;
+  flex-direction: row;
+  padding-top: 2rem;
+}
+.data-user #userId{
+  padding-right: 10px;
+}
+.data-user #jobId{
+  text-align: center;
+  font-weight: 300;
+  padding-top: 2px;
+  color: #babacf;
+}
+.drawer{
+  position: absolute;
+  left: 40%;
+}
+.drawer .img__drawer{
+  width: 80%;
+  position: relative;
+  left: 10rem;
+  object-fit: contain;
+  box-shadow: 0 7px 29px rgba(100,100,111,.2);
+}
+.btn-check{
+  position: relative;
+  top: -30px;
+  left: 40%;
+  width: 5.5rem;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 50px;
+  box-shadow: 0 7px 29px rgba(100,100,111,.2);
+  z-index: 100;
+}
+.btn{
+  cursor: pointer;
+  border: none;
+  background: #fff;
+  border-radius: 50px;
+  padding-top: 5px;
+  margin: 8px;
+}
+.btn:focus{
+  outline: none;
+}
+.btn__prev{
+  padding-left: 15px;
+}
+.btn__next{
+  padding-right: 15px;
+}
+
+@media screen and (max-width: 820px) {
+  body{
+    background-size: 325px 325px,500px 500px,50px 50px;
+    background-position: top 25px center,left bottom -300px,center top 56.5%;
+  }
+  .container{
+    height: 100vh;
+  }
+  .drawer{
+    top: 15%;
+  }
+}
+@media screen and (max-width: 750px){
+  .container{
+    display: flex;
+    justify-content: center;
+  }
+  .drawer .img__drawer{
+    display: none;
+  }
+  .testimonial{
+    padding-top: 10rem;
+  }
+  .testimonial #testimonialId{
+    width: 20rem;
+    font-size: 15px;
+    text-align: justify;
+  }
+  .data-user{
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+  }
+  .btn-check{
+    top: 7rem;
+    left: 25px;
+    width: 4.5rem;
+    height: 2rem;
+  }
+  .btn{
+    padding-top: 0;
+  }
+  .btn__prev{
+    padding-left: 8px;
+  }
+  .btn__next{
+    padding-right: 8px;
+  }
+  .container__drawer{
+    display: inline;
+    width: 12rem;
+    display: flex;
+    align-self: center;
+    position: absolute;
+    top: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .btn-check{
+    left: .1rem;
+  }
+  .testimonial{
+    padding-top: 14rem;
+  }
+  .container__drawer{
+    top: 60px;
+  }
+  .testimonial #testimonialId {
+    width: 18rem;
+  }
+  .data-user{
+    padding-top: 1.8rem
+  }
+  .btn-check{
+    top: 10rem;
+  }
+}
