@@ -7,24 +7,30 @@ const job = document.getElementById("jobId");
 const btn_prev = document.getElementById("btn-prev");
 const btn_next = document.getElementById("btn-next");
 
-let images = ["../src/img/image-john.jpg", "../src/img/image-john.jpg"];
+let images = ["../src/img/image-tanya.jpg", "../src/img/image-john.jpg"];
 
 btn_prev.addEventListener("click", (e) => {
-  e.preventDefault();
-  let n = 1;
-  showSliderAndText((n += 1));
+  let n = randomNum();
+  showSliderAndText();
 });
 
 btn_next.addEventListener("click", (e) => {
-  e.preventDefault();
-  let n = 1;
-  showSliderAndText((n += 1));
+  let n = randomNum();
+  showSliderAndText();
 });
 
-const showSliderAndText = (n) => {
-  if (n <= images.length || n >= images.length) {
-    window.drawer_1.setAttribute("src", images[n]);
-    window.drawer_2.setAttribute("src", images[n]);
-  } else n = 0;
+const randomNum = () => {
+  return Math.random() * (0 - 1) + 1;
 };
-// "../img/image-john.jpg"
+
+const showSliderAndText = () => {
+  debugger;
+  let n = randomNum();
+  if (n > 0.1 && n <= 0.5) {
+    window.drawer_1.setAttribute("src", images[1]);
+    window.drawer_2.setAttribute("src", images[1]);
+  } else {
+    window.drawer_1.setAttribute("src", images[0]);
+    window.drawer_2.setAttribute("src", images[0]);
+  }
+};
