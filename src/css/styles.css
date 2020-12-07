@@ -29,6 +29,7 @@ body{
     display: flex;
     flex-direction: column;
     align-self: center;
+    padding-left: 16%;
     z-index: 1
 }
 .testimonial #testimonialId{
@@ -53,6 +54,7 @@ body{
 .drawer{
   position: absolute;
   left: 40%;
+  bottom: 27%;
 }
 .drawer .img__drawer{
   width: 80%;
